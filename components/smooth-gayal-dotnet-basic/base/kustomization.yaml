@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: smooth-gayal-dotnet-basic
+  janus-idp.io/tekton: smooth-gayal-dotnet-basic
+  backstage.io/kubernetes-id: smooth-gayal-dotnet-basic
+  backstage.io/kubernetes-namespace: rhtap-e2e-ci 
+  app.kubernetes.io/part-of: smooth-gayal-dotnet-basic
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
